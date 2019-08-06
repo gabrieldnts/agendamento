@@ -1,9 +1,11 @@
+require("dotenv").config();
+
 module.exports = {
-  dialect: "mysql",
-  host: "127.0.0.1",
-  username: "root",
-  password: "",
-  database: "gonodemodulo2",
+  dialect: process.env.DB,
+  host: process.env.DB_HOST,
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DATABASE,
   operatorAliases: false,
   define: {
     timestamps: true,
