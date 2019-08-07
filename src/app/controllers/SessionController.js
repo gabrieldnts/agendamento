@@ -17,7 +17,9 @@ class SessionController {
       return res.redirect("/");
     }
     req.session.user = user;
-
+    if (user.provider) {
+      return res.redirect("/app/provider");
+    }
     return res.redirect("/app/dashboard");
   }
   destroy(req, res) {
