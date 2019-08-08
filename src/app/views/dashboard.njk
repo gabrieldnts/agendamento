@@ -16,5 +16,11 @@
       {% endfor %}
     </ul>
     <a href="/app/logout" class="logout">Sair</a>
+    {% if appointment.stored %}
+      <script>
+        toastr.success('Obrigado por agendar conosco.', 'Agendamento concluído', {timeOut: 5000})
+      </script>
+    {% endif %}
   </div>
 {% endblock %}
+

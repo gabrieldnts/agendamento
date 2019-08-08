@@ -15,7 +15,7 @@ class AppointmentController {
       provider_id: provider,
       date
     });
-    return res.redirect("/app/dashboard");
+    return res.redirect("/app/dashboard?stored=true");
   }
 }
 module.exports = new AppointmentController();
